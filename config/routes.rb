@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        registrations: 'users/registrations',
+
+      }
+
   
   #/api/v1/challenges
   #/api/v1/challenges
