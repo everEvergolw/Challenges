@@ -1569,3 +1569,26 @@ Processing by Users::SessionsController#new as */*
 Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 714)
 
 
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-05-31 00:09:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asfaddas111111", "description"=>"description", "start_date"=>"03/04/2017", "end_date"=>"03/06/2017"}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 872)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-31 00:09:26 +0100
+Processing by Users::SessionsController#new as */*
+Completed 401 Unauthorized in 77ms (Views: 0.4ms | ActiveRecord: 8.2ms | Allocations: 18286)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-05-31 00:09:29 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asfaddas111111", "description"=>"description", "start_date"=>"03/04/2017", "end_date"=>"03/06/2017"}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-31 00:09:29 +0100
+Processing by Users::SessionsController#new as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 243)
+
+
