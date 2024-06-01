@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types'
+import {useNavigate} from 'react-router-dom'
 import { useState } from 'react'
 import { validateEmail,validatePassword } from '../utlities/validations'
 import { Link } from 'react-router-dom';
+
+import { registerApi,loginApi } from '../apis/authentication';
 
 const initialErrorsState = {
     email :'',
@@ -10,6 +13,7 @@ const initialErrorsState = {
 }
 
 const Authentication = ({pageType}) =>{
+    const navigate = useNavigate() 
     const [email,setEmail] = useState('')
 
     const [errors, setErrors] = useState(initialErrorsState)
@@ -25,26 +29,88 @@ const Authentication = ({pageType}) =>{
     }
 
     const handleSubmit = async (e) =>{
+            e.preventDefault();
 
+            let newErrors = {}
 
             if(!validateEmail(email)){
                 //Show error
-                setErrors({
-                    ...errors,
+                newErrors = {
+                    ...newErrors,
                     email : 'Invalid email.'
-            })
+
+                }
+                
             }
 
             if(!validatePassword(password)){
+
                 //Show error
-                setErrors({
-                    ...errors,
+                newErrors = {
+                    ...newErrors,
                     password : 'Password should be at least 6 characters long.'
-            })
+
+                }
+             
 
             }
-
+            
+            setErrors(newErrors)
+            
             //make API call 
+            
+            if(pageType === PageType.LOGIN){
+                // Login APi call
+                const[result, error] =  await loginApi({
+                    
+                    user: {
+                        email: email,
+                        password: password 
+                    }
+
+                })
+                
+                handleResponse([result,error])
+
+            }
+            else{
+
+                const[result, error] =  await registerApi({
+                    
+                    user: {
+                        email: email,
+                        password: password 
+                    }
+
+                })
+                
+                handleResponse([result,error])
+           
+
+
+            }
+    }
+
+    const handleResponse = ([result,error]) =>{
+
+
+        if(error){
+            setErrors({
+                ...errors,
+                api: error
+        })
+        }
+        else{
+            const message = result.message
+            const user = result.data
+            "message",
+            console.log("message", message)
+            console.log("message", user)
+            // TODO: Navigate to home page 
+            navigate('/')
+
+        }
+
     }
 
 
@@ -134,6 +200,8 @@ const Authentication = ({pageType}) =>{
 
 
                     </button>
+
+                    {errors.api && <p className='text-sm text-medium text-red-500 mt-1'> {errors.api}  </p> }  
 
 
                 </form>
