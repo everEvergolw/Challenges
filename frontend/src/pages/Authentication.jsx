@@ -7,6 +7,7 @@ import { useCookies } from 'react-cookie';
 
 
 import { registerApi,loginApi } from '../apis/authentication';
+import Button from '../elements/Button';
 
 const initialErrorsState = {
     email :'',
@@ -184,7 +185,7 @@ const Authentication = ({pageType}) =>{
 
                     }
 
-                <form onSubmit={handleSubmit} className='mt-10 max-w-96 flex flex-col gap-8'> 
+                <form className='mt-10 max-w-96 flex flex-col gap-8'> 
 
 
                     <div>
@@ -221,15 +222,14 @@ const Authentication = ({pageType}) =>{
                     </div>
 
 
-                  
-                    <button 
-                        type='submit'
-                        className='bg-indigo-500 hover:bg-indigo-600 px-3 py-2 rounded text-white'>
+                    <Button 
+                        onClick={handleSubmit}
+                    >
 
-                        {(pageType ===PageType.LOGIN) ? 'Login' : 'Register' }      
+                    {(pageType ===PageType.LOGIN) ? 'Login' : 'Register' }      
 
-
-                    </button>
+                    </Button>
+                   
 
                     {errors.api && <p className='text-sm text-medium text-red-500 mt-1'> {errors.api}  </p> }  
 
