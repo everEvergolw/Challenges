@@ -1716,3 +1716,335 @@ Processing by Users::SessionsController#create as */*
 Completed 200 OK in 179ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 5073)
 
 
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 19:46:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "asd@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 27ms (ActiveRecord: 7.7ms | Allocations: 9766)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 198ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 12713)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:02:51 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 181ms (Views: 0.4ms | ActiveRecord: 3.7ms | Allocations: 4866)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:03:06 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 172ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1537)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:06:10 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 171ms (ActiveRecord: 0.2ms | Allocations: 1294)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 171ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:06:53 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 169ms (ActiveRecord: 0.2ms | Allocations: 1290)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 167ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:07:22 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 172ms (ActiveRecord: 0.3ms | Allocations: 1277)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 169ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:07:42 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 187ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1525)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:09:21 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 171ms (ActiveRecord: 0.2ms | Allocations: 1277)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 172ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:12:15 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 178ms (ActiveRecord: 0.2ms | Allocations: 1278)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 173ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:12:31 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 172ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1522)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:12:36 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 178ms (ActiveRecord: 0.2ms | Allocations: 1277)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 175ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-06-01 20:13:43 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asd@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "jti") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "asd@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-06-01 19:13:43.259430"], ["updated_at", "2024-06-01 19:13:43.259430"], ["jti", "bc0c844e-1c40-4eb0-8903-abd0b0cfe05e"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 187ms (Views: 0.3ms | ActiveRecord: 9.4ms | Allocations: 5746)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-06-01 20:13:58 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asd@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 176ms (Views: 0.1ms | ActiveRecord: 3.4ms | Allocations: 4035)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 20:15:27 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "asd@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 197ms (ActiveRecord: 7.2ms | Allocations: 5611)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 168ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 21:25:05 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "asd@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 198ms (ActiveRecord: 8.0ms | Allocations: 8017)
+
+
+Processing by Users::SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 175ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 22:51:16 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 191ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 8448)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 22:51:52 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 168ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 22:52:09 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 22:55:28 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 168ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1523)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:05:26 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 3917)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "da3b83ef-b984-4089-bc53-a33c9d435ff0"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:05:33 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 175ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1524)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:05:34 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 744)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (6.8ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "f13978c1-9f61-48aa-82f4-239b61cea3a6"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:06:29 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1523)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:06:31 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 744)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (6.5ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "1a6164c4-e502-4d3a-b95b-0c7792131f77"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:07:20 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:10:13 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 744)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "673f3f7f-8efa-4fc3-a7a4-e81ce0261f9f"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:12:35 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:12:37 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (6.2ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "3a13bfad-d357-496d-a66e-8e46d65414fa"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:19:02 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 188ms (Views: 0.5ms | ActiveRecord: 4.1ms | Allocations: 4372)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:19:03 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "6531f936-2e68-41bd-8cba-db38ad3b7747"], ["id", 1]]
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:19:04 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 723)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "13fccb20-2851-4a81-83de-821e672cf1ac"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:20:20 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 178ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1522)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:20:21 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 743)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (6.7ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "2c347943-e341-4cd0-ad48-d8eaf797356e"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-01 23:20:23 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 174ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1522)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-01 23:20:24 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 743)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (7.0ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "f941e519-36a7-4021-8c68-49db5368539d"], ["id", 1]]

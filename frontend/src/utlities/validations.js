@@ -13,6 +13,6 @@ export const validateEmail = (email) =>{
 export const validatePassword = (password) =>{
 
 
-    return  password && password.length > 6 
+    return  password && password.length >= 6 
     
 }

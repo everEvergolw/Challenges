@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import {useNavigate} from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { validateEmail,validatePassword } from '../utlities/validations'
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+
 
 import { registerApi,loginApi } from '../apis/authentication';
 
@@ -13,7 +15,22 @@ const initialErrorsState = {
 }
 
 const Authentication = ({pageType}) =>{
+    const [cookies, setCookie] = useCookies(['jwt']);
+
     const navigate = useNavigate() 
+
+ 
+    useEffect(() =>{
+
+        if(cookies.jwt){
+
+            navigate('/')
+        }
+    
+
+
+    }, [])
+
     const [email,setEmail] = useState('')
 
     const [errors, setErrors] = useState(initialErrorsState)
@@ -56,12 +73,17 @@ const Authentication = ({pageType}) =>{
             }
             
             setErrors(newErrors)
+
+            const hasErrors = Object.values(newErrors).some(error => error !== '');
+            if(hasErrors){
+                return
+            }
             
             //make API call 
             
             if(pageType === PageType.LOGIN){
                 // Login APi call
-                const[result, error] =  await loginApi({
+                const[response, error] =  await loginApi({
                     
                     user: {
                         email: email,
@@ -70,12 +92,12 @@ const Authentication = ({pageType}) =>{
 
                 })
                 
-                handleResponse([result,error])
+                handleResponse([response,error])
 
             }
             else{
 
-                const[result, error] =  await registerApi({
+                const[response, error] =  await registerApi({
                     
                     user: {
                         email: email,
@@ -84,14 +106,14 @@ const Authentication = ({pageType}) =>{
 
                 })
                 
-                handleResponse([result,error])
+                handleResponse([response,error])
            
 
 
             }
     }
 
-    const handleResponse = ([result,error]) =>{
+    const handleResponse = async ([response,error]) =>{
 
 
         if(error){
@@ -101,12 +123,20 @@ const Authentication = ({pageType}) =>{
         })
         }
         else{
-            const message = result.message
+            
+            const jwt = response.headers.get('Authorization')
+            const result =  await response.json();
+
+            const message = result.message 
             const user = result.data
-            "message",
-            console.log("message", message)
-            console.log("message", user)
+            setCookie('jwt', jwt, {
+                path: '/',
+                sameSite: 'none', // Required for third-party contexts
+                secure: true,    // Required if sameSite='none'
+                maxAge: 3600     // Optional: set cookie expiration as needed
+            });            
             // TODO: Navigate to home page 
+
             navigate('/')
 
         }
