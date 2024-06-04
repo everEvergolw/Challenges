@@ -1,8 +1,10 @@
 module Api
     module V1
         class ChallengesController < ApplicationController
+
             before_action :authenticate_user!, only: %i[create update destroy] 
-           # before_action :authorize_admin, only: %i[create update destroy] 
+
+            before_action :authorize_admin, only: %i[create update destroy] 
 
             before_action :set_challenge, only: %i[show update destroy]
 
@@ -102,8 +104,9 @@ module Api
 
             def authorize_admin
                 
-                render json: {message: 'Forbidden action'}  , status: :unauthorized unless current_user.email == ENV['ADMIN_EMAIL']
-                
+                #render json: {message: 'Forbidden action'}  , status: :unauthorized unless current_user.email == ENV['ADMIN_EMAIL']
+                 render json: {message: 'Forbidden action'}  , status: :unauthorized unless current_user.email == 'admin@gmail.com'
+
 
             
             end
