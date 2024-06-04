@@ -1,9 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "../elements/Button"
 import Datepicker from "react-tailwindcss-datepicker"; 
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import EditorToolbar, { modules, formats } from "../components/EditorToolbar";
+import { addChallenge } from "../apis/challenges";
+import {useNavigate} from 'react-router-dom'
+import { useCookies } from 'react-cookie';
+
+
+
 
 const initialErrorsState = {
     title :'',
@@ -20,6 +26,20 @@ const AddChallenge = () =>{
     const [description, setDescription] = useState('') 
     const [errors, setErrors] = useState(initialErrorsState)
 
+    const [cookies, setCookie] = useCookies(['jwt']);
+
+    const navigate = useNavigate() 
+
+    useEffect(() =>{
+        if(!cookies.jwt){
+            //TODO: show toast
+            navigate('/')
+
+        }
+    },[])
+
+
+
     const [value, setValue] = useState({ 
         startDate: null, 
         endDate: null 
@@ -32,7 +52,7 @@ const AddChallenge = () =>{
         setValue(newValue); 
         } 
 
-    const handleSubmit = (e) =>{
+    const handleSubmit =  (e) =>{
         e.preventDefault()
 
         let newErrors = {}
@@ -80,6 +100,44 @@ const AddChallenge = () =>{
             return
         }
         //TODO: api call
+        addChallengeAPi()
+
+    }
+
+    const addChallengeAPi = async () =>{
+        
+        const[response, error] =  await addChallenge(
+            cookies.jwt,
+        {   challenge: { 
+            title: title,
+            description: description,
+            start_date: value.startDate,
+            end_date: value.endDate, 
+        }
+
+    })
+    
+    handleResponse([response,error])
+
+    }
+
+
+    const handleResponse = async ([response,error]) =>{
+
+
+        if(error){
+            setErrors({
+                ...errors,
+                api: error
+        })
+        }
+        else{
+            
+            //TODO: show toast
+
+            navigate('/')
+
+        }
 
     }
 

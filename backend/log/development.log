@@ -2048,3 +2048,39 @@ Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 743)
 
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mUser Update (7.0ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "f941e519-36a7-4021-8c68-49db5368539d"], ["id", 1]]
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-04 14:23:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 263ms (Views: 0.5ms | ActiveRecord: 23.1ms | Allocations: 22764)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 14:23:53 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdasdas", "description"=>"<p>dasdasdas</p>", "start_date"=>"2024-06-29", "end_date"=>"2024-07-30"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1718)
+
+
+  [1m[36mChallenge Load (7.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 14:30:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"1213213asd", "description"=>"<p>asdasd123</p>", "start_date"=>"2024-07-03", "end_date"=>"2024-08-01"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 7.1ms | Allocations: 19475)
+
+
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 14:32:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"sadsadsa", "description"=>"<p>sadasdas</p>", "start_date"=>"2024-06-26", "end_date"=>"2024-06-26"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 56ms (Views: 0.4ms | ActiveRecord: 8.0ms | Allocations: 19483)
+
+

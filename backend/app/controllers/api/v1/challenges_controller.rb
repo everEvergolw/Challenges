@@ -22,7 +22,7 @@ module Api
                 if @challenge.save 
                     render json: {message: 'Challenge added successfully',data: @challenge }
                 else
-                    render json: {message: 'Failed to  add challenge',data: @challenge.errors }
+                    render json: {message: 'Failed to  add challenge',data: @challenge.errors } , status: :unauthorized
 
                 end
             
@@ -88,7 +88,7 @@ module Api
 
             def authorize_admin
                 
-                render json: {message: 'Forbidden action'} unless current_user.email == ENV['ADMIN_EMAIL']
+                render json: {message: 'Forbidden action'}  , status: :unauthorized unless current_user.email == ENV['ADMIN_EMAIL']
                 
 
             
