@@ -11,10 +11,10 @@ import {
 } from "react-router-dom";
 import Authentication, {PageType} from './pages/Authentication.jsx';
 import AddChallenge from './pages/AddChallenge.jsx'
-
+import Challenge from './pages/Challenge.jsx'
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/*",
     element: <App/>,
   },
 
@@ -33,6 +33,7 @@ const router = createBrowserRouter([
     element: <AddChallenge/>,
   },
 
+ 
 ]);
 
 

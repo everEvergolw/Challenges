@@ -9,7 +9,7 @@ import ChallengeCard from '../components/ChallengeCard';
 
 
 
-const ChallengeList = () =>{
+const ChallengeList = () =>{ 
 
     
 
@@ -58,14 +58,14 @@ const ChallengeList = () =>{
 
     return(  
     
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-12 space-y-20"> 
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pt-12 space-y-10"> 
 
             {
                 activeChallenges && activeChallenges.length > 0 &&
                 <>
                 
                 <h3 className="text-2xl font-bold">Active Challenges</h3>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 my-6'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-6'>
                     {activeChallenges.map((challenge)=>{
 
                         return <ChallengeCard key={challenge.id} challenge={challenge} />
@@ -85,7 +85,7 @@ const ChallengeList = () =>{
                 <>
                 
                 <h3 className="text-2xl font-bold">Upcoming Challenges</h3>
-                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 my-6'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-6'>
                     {upcomingChallenges.map((challenge)=>{
                         
                         return <ChallengeCard key={challenge.id} challenge={challenge} />

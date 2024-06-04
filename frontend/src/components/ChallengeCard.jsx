@@ -1,5 +1,6 @@
 import DefaultThumbnail from '../assets/auth_graphic.svg'
 import { formatDate } from '../utlities/date'
+import {Link} from 'react-router-dom'
 
 const ChallengeCard = ({challenge}) =>{
 
@@ -42,13 +43,16 @@ const ChallengeCard = ({challenge}) =>{
 
     return(
     
-    
+    <Link
+        to={`/challenge/${challenge.id}`}
+    >
+
     <div className="flex flex-col border border-black rounded hover:cursor-pointer hover:shadow-lg ">
         <img className='aspect-square w-full border-b border-black' src={DefaultThumbnail}/>
 
         <div className='p-4 space-y-2'>
 
-           <p className='font-medium '> {challenge.title} </p>
+           <p className='font-medium  line-clamp-1 text-ellipsis'> {challenge.title} </p>
            {dateText()}
 
         </div>
@@ -58,7 +62,8 @@ const ChallengeCard = ({challenge}) =>{
 
 
         
-    </div>)
+    </div> 
+    </Link>)
 
 
 
