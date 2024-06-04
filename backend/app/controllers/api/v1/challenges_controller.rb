@@ -2,7 +2,7 @@ module Api
     module V1
         class ChallengesController < ApplicationController
             before_action :authenticate_user!, only: %i[create update destroy] 
-            before_action :authorize_admin, only: %i[create update destroy] 
+           # before_action :authorize_admin, only: %i[create update destroy] 
 
             before_action :set_challenge, only: %i[show update destroy]
 
@@ -13,6 +13,21 @@ module Api
                render json: @challenges 
             
             end
+            
+
+            # GET api/v1/active_and_upcoming
+            def active_and_upcoming
+                
+                @active_challenges =  Challenge.active
+                @upcoming_challenges =  Challenge.upcoming
+
+                @all = Challenge.all
+
+                render json: {active: @active_challenges, upcoming: @upcoming_challenges, all: @all} 
+             
+             end
+
+
 
             #  POST   /api/v1/challenges 
             def create
@@ -23,7 +38,6 @@ module Api
                     render json: {message: 'Challenge added successfully',data: @challenge }
                 else
                     render json: {message: 'Failed to  add challenge',data: @challenge.errors } , status: :unauthorized
-
                 end
             
             end

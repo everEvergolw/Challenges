@@ -2,6 +2,7 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Features from "./components/Features"
+import ChallengeList from "./container/ChallengeList"
 
 function App() {
 
@@ -17,11 +18,10 @@ function App() {
     */}
     
         <Navbar/>
+
+        <ChallengeList/>
         <Features/>
 
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
 
 
       <Footer/>

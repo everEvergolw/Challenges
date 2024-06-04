@@ -2084,3 +2084,926 @@ Filter chain halted as :authorize_admin rendered or redirected
 Completed 401 Unauthorized in 56ms (Views: 0.4ms | ActiveRecord: 8.0ms | Allocations: 19483)
 
 
+Started GET "/" for 127.0.0.1 at 2024-06-04 15:00:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jiahao/.asdf/installs/ruby/3.3.1/lib/ruby/gems/3.3.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jiahao/.asdf/installs/ruby/3.3.1/lib/ruby/gems/3.3.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 363)
+Completed 200 OK in 20ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4448)
+
+
+Started GET "/api/v1/active" for 127.0.0.1 at 2024-06-04 15:00:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/active"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-06-04 15:00:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2024-06-04 15:03:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jiahao/.asdf/installs/ruby/3.3.1/lib/ruby/gems/3.3.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jiahao/.asdf/installs/ruby/3.3.1/lib/ruby/gems/3.3.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 363)
+Completed 200 OK in 19ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4447)
+
+
+Started GET "/api/v1/challenges/active" for 127.0.0.1 at 2024-06-04 15:04:02 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active"}
+  [1m[36mChallenge Load (1.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Completed 404 Not Found in 39ms (ActiveRecord: 17.9ms | Allocations: 7611)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active):
+  
+app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Started GET "/api/v1/challenges/active" for 127.0.0.1 at 2024-06-04 15:05:12 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active"}
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Completed 404 Not Found in 7ms (ActiveRecord: 2.9ms | Allocations: 2138)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active):
+  
+app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Started GET "/api/v1/challenges/active" for 127.0.0.1 at 2024-06-04 15:06:31 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Completed 404 Not Found in 9ms (ActiveRecord: 2.8ms | Allocations: 2185)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active):
+  
+app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:06:39 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 502)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:114:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:00 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.4ms | Allocations: 2118)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:01 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:01 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:02 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:02 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 513)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:02 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:03 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:03 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:03 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:04 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:09:04 +0100
+Processing by Api::V1::ChallengesController#show as HTML
+  Parameters: {"id"=>"active_and_upcoming"}
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE "challenges"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Challenge with 'id'=active_and_upcoming):
+  
+app/controllers/api/v1/challenges_controller.rb:118:in `set_challenge'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:10:45 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1247)
+
+
+  
+NoMethodError (undefined method `upcoming' for class Challenge):
+  
+app/controllers/api/v1/challenges_controller.rb:22:in `active_and_upcoming'
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:11:09 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as HTML
+  [1m[36mChallenge Load (7.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 51ms (Views: 34.7ms | ActiveRecord: 11.9ms | Allocations: 14270)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:29:11 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as HTML
+  [1m[36mChallenge Load (8.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 13ms (Views: -0.1ms | ActiveRecord: 12.2ms | Allocations: 4816)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:31:39 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.8ms | Allocations: 1966)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:31:39 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (1.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.8ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:32:13 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:32:13 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 1.8ms | Allocations: 1965)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:34:27 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:34:55 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:34:55 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (2.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 4.7ms | Allocations: 1965)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-06-04 15:36:14 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "jti") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "admin@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-06-04 14:36:14.625214"], ["updated_at", "2024-06-04 14:36:14.625214"], ["jti", "3738a109-5a14-44ed-8573-f333c2490562"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 220ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 15879)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:36:14 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1969)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:36:14 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 1964)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 15:36:36 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdsadasTest1", "description"=>"<p>dasdasdas</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-15"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1603)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:36:58 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (1.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 3.4ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:36:58 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.5ms | Allocations: 1964)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2024-06-04 15:36:59 +0100
+Processing by Users::SessionsController#destroy as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:25:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 882)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "jti" = $1 WHERE "users"."id" = $2[0m  [["jti", "ecf89bb4-d05d-4143-b277-488f83375440"], ["id", 43]]
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:36:59 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.1ms | Allocations: 1964)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-04 15:37:03 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 178ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1972)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:37:03 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.3ms | Allocations: 1964)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 15:37:03 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1964)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 15:38:50 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdsadsaTest1", "description"=>"<p>12312321</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-21"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1221)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:20:06 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdsadsaTest1", "description"=>"<p>12312321</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-21"}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 93)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-06-04 17:20:06 +0100
+Processing by Users::SessionsController#new as */*
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:20:11 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (11.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 17ms (Views: 0.0ms | ActiveRecord: 15.7ms | Allocations: 4824)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:20:11 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (3.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 4.2ms | Allocations: 1965)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2024-06-04 17:20:14 +0100
+Processing by Users::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1557)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:20:14 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (2.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 3.2ms | Allocations: 1976)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:20:14 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.9ms | Allocations: 1964)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:20:24 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"sadasd", "description"=>"<p>sadasdas</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-16"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1226)
+
+
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:22:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"sadasd", "description"=>"<p>sadasdas</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-16"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 45ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 19489)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:22:20 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"sadasd", "description"=>"<p>sadasdas</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-16"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1235)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:24:58 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdsadasTest1", "description"=>"<p>dasdasdsa</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-15"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+Filter chain halted as :authorize_admin rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1233)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:25:52 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"asdsadasTest1", "description"=>"<p>dasdasdsa</p>", "start_date"=>"2024-06-04", "end_date"=>"2024-07-15"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+  [1m[36mChallenge Create (2.1ms)[0m  [1m[32mINSERT INTO "challenges" ("title", "description", "start_date", "end_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "asdsadasTest1"], ["description", "<p>dasdasdsa</p>"], ["start_date", "2024-06-04"], ["end_date", "2024-07-15"], ["created_at", "2024-06-04 16:25:52.429563"], ["updated_at", "2024-06-04 16:25:52.429563"], ["user_id", 43]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 7.2ms | Allocations: 19967)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:25:52 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.0ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 3.5ms | Allocations: 2303)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:25:52 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 2.2ms | Allocations: 2132)
+
+
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:26:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.6ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 53ms (Views: 36.9ms | ActiveRecord: 10.6ms | Allocations: 16507)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:26:45 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms | Allocations: 2147)
+
+
+Started POST "/api/v1/challenges" for 127.0.0.1 at 2024-06-04 17:26:53 +0100
+Processing by Api::V1::ChallengesController#create as */*
+  Parameters: {"challenge"=>{"title"=>"sadasdsa", "description"=>"<p>dasdasdas</p>", "start_date"=>"2024-06-29", "end_date"=>"2024-07-30"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+  [1m[36mChallenge Create (1.7ms)[0m  [1m[32mINSERT INTO "challenges" ("title", "description", "start_date", "end_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "sadasdsa"], ["description", "<p>dasdasdas</p>"], ["start_date", "2024-06-29"], ["end_date", "2024-07-30"], ["created_at", "2024-06-04 16:26:53.939341"], ["updated_at", "2024-06-04 16:26:53.939341"], ["user_id", 43]]
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:37:in `create'
+Completed 200 OK in 60ms (Views: 0.3ms | ActiveRecord: 6.1ms | Allocations: 15918)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:26:53 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.7ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.3ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:26:53 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:02 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 3.0ms | Allocations: 5416)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:15 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.7ms | Allocations: 2308)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:17 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (1.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 3.2ms | Allocations: 2296)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:17 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (2.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 3.6ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:29 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:35 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (8.9ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 25ms (Views: 14.7ms | ActiveRecord: 9.4ms | Allocations: 2310)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:35 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.0ms | Allocations: 2296)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:39 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:46 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.9ms | Allocations: 2296)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:48 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:51 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:52 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.9ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:55 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 1.1ms | Allocations: 2310)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:27:55 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:28:13 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.8ms | Allocations: 2296)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:28:42 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:28:51 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (2.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (2.8ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 5.5ms | Allocations: 2310)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:28:51 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (2.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 2.7ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:29:00 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.4ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 2296)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:29:02 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.2ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.0ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:29:02 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 1.4ms | Allocations: 2295)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:29:23 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (1.1ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.5ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 2.0ms | Allocations: 2310)
+
+
+Started GET "/api/v1/challenges/active_and_upcoming" for 127.0.0.1 at 2024-06-04 17:29:23 +0100
+Processing by Api::V1::ChallengesController#active_and_upcoming as */*
+  Parameters: {"challenge"=>{}}
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date <= '2024-06-04' AND end_date >= '2024-06-04'  )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges" WHERE (start_date > '2024-06-04'   )[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+  [1m[36mChallenge Load (0.3ms)[0m  [1m[34mSELECT "challenges".* FROM "challenges"[0m
+  ↳ app/controllers/api/v1/challenges_controller.rb:26:in `active_and_upcoming'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 2296)
+
+

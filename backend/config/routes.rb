@@ -12,10 +12,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :challenges
-      
+      resources :challenges do
+        collection do
+          get :active_and_upcoming  # Change here from put to get
+        end
+      end
     end
-  end    
+  end
 
 
 
